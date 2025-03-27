@@ -11,7 +11,7 @@ function TwonameInput() {
   
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Players: ${players.map(p => p.name).join(', ')}');
+    alert(`Players: ${players.map(p => p.name).join(', ')}`);
   };
 
   return (
