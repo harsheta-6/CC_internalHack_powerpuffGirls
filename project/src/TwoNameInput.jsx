@@ -10,7 +10,7 @@ function TwoNameInput() {
   
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Players: ${players.map(p => p.name).join(', ')}');
+    alert(`Players: ${players.map(p => p.name).join(', ')}`);
   };
 
   return (
@@ -28,7 +28,7 @@ function TwoNameInput() {
                 newPlayers[index].name = e.target.value;
                 setplayers(newPlayers);
               }}
-              placeholder={'Player ${index +1}'}
+              placeholder={`Player ${index +1}`}
               required
               />
             </div>
@@ -40,4 +40,4 @@ function TwoNameInput() {
   );
 }
 
-export default App
+export default TwoNameInput;

@@ -41,4 +41,4 @@ function TwonameInput() {
   );
 }
 
-export default App
+export default App;

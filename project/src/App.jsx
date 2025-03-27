@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import ReactDOM from 'react-dom/client';
-import {createBrowserRouter } from 'react-router-dom';
+
 import TwoNameInputPage from './assets/TwoNameInput';
 const router = createBrowserRouter([]);
 
