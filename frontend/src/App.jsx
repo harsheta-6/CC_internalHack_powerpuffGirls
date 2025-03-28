@@ -10,13 +10,15 @@ function App() {
 
   return (
     <>
-      <div>
-        <div className="bg-black">site-name</div>
-      </div>
-      <div>
-        <div>2 Player</div>
-        <div>3 Player</div>
-        <div>4 Player</div>
+      <div className="bg-[#1E1B1B] min-h-screen w-screen">
+        <div>
+          <div>site-name</div>
+        </div>
+        <div>
+          <div>2 Player</div>
+          <div>3 Player</div>
+          <div>4 Player</div>
+        </div>
       </div>
     </>
   );
