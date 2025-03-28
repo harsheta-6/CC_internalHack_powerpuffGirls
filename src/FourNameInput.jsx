@@ -30,7 +30,7 @@ function FourNameInput() {
                 newPlayers[index].name = e.target.value;
                 setplayers(newPlayers);
               }}
-              placeholder={'Player ${index +1}'}
+              placeholder={`Player ${index +1}`}
               required
               />
             </div>
