@@ -15,7 +15,7 @@ function TwoNameInput() {
 
   return (
     <>
-    <div>
+    <div className="bg-[#1E1B1B] min-h-screen w-screen text-[#ECE6C2] flex flex-col items-center justify-center">
         <div>Player Setup</div>
         <form onSubmit={handleSubmit}>
           {players.map((player,index)=>(
