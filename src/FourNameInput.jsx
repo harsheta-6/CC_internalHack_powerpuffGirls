@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Quiz from "./components/mainPrompt";
 
+
+
 function FourNameInput() {
   const [isGameStarted, setIsGameStarted] = useState(false);
   const [players, setPlayers] = useState([
@@ -22,7 +24,7 @@ function FourNameInput() {
   return (
     <div className="flex items-center justify-center min-h-screen bg-[#1E1B1B]">
       <div>
-        <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
+        <h2 className="text-[70px] font-medium text-center absolute inset-x-0 top-30 h-20 text-[#D2A24C]" style={{fontFamily:'Adamina-Regular'}}>
           Player Setup
         </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
