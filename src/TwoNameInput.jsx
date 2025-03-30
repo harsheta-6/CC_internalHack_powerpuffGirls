@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Quiz from "./components/mainPrompt";
+import Footer from "./footer"
 
 function TwoNameInput() {
   const [isGameStarted, setIsGameStarted] = useState(false);
@@ -20,12 +21,12 @@ function TwoNameInput() {
   return (
     <div className="bg-[#1E1B1B] min-h-screen w-screen text-[#ECE6C2] flex items-center justify-center ">
       <div>
-        <h2 className="text-[70px] font-medium text-center mb-85 text-[#73BDA8]" style={{fontFamily:'Adamina-Regular'}}>
+        <h2 className="text-[70px] font-medium text-center absolute inset-x-0 top-30 h-20 text-[#73BDA8]" style={{fontFamily:'Adamina-Regular'}}>
           Player Setup
         </h2>
-        <form onSubmit={handleSubmit} className="space-y-9">
+        <form onSubmit={handleSubmit} className="space-y-7 absolute inset-x-120 top-80 h-30 tracking-[0.07em] text-[20px]" style={{fontFamily:'CENTAUR'}}>
           {players.map((player, index) => (
-            <div key={index} className="flex items-center space-x-5 ">
+            <div key={index} className="flex items-center space-x-5">
               <div
                 className="w-7 h-7 rounded-full "
                 style={{ backgroundColor: player.color }}
@@ -52,6 +53,7 @@ function TwoNameInput() {
           </button>
         </form>
       </div>
+      <Footer />
     </div>
   );
 }
