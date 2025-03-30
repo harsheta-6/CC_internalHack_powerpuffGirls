@@ -18,16 +18,16 @@ function TwoNameInput() {
   }
 
   return (
-    <div className="bg-[#1E1B1B] min-h-screen w-screen text-[#ECE6C2] flex items-center justify-center">
-      <div className="bg-[#2A2727] p-8 rounded-xl shadow-lg max-w-md w-full">
-        <h2 className="text-2xl font-bold text-center mb-6 text-[#ECE6C2]">
+    <div className="bg-[#1E1B1B] min-h-screen w-screen text-[#ECE6C2] flex items-center justify-center ">
+      <div>
+        <h2 className="text-[70px] font-medium text-center mb-85 text-[#73BDA8]" style={{fontFamily:'Adamina-Regular'}}>
           Player Setup
         </h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-9">
           {players.map((player, index) => (
-            <div key={index} className="flex items-center space-x-3">
+            <div key={index} className="flex items-center space-x-5 ">
               <div
-                className="w-4 h-4 rounded-full flex-shrink-0"
+                className="w-7 h-7 rounded-full "
                 style={{ backgroundColor: player.color }}
               />
               <input
@@ -40,13 +40,13 @@ function TwoNameInput() {
                 }}
                 placeholder={`Player ${index + 1}`}
                 required
-                className="w-full px-4 py-2 rounded-lg border-2 border-[#3A3535] bg-[#2A2727] text-[#ECE6C2] focus:border-[#CC6B49] focus:ring focus:ring-[#CC6B49] focus:ring-opacity-50 transition-all outline-none placeholder-[#ECE6C2] placeholder-opacity-50"
+                className="w-full px-4 py-2 rounded-[40px] border-2 border-[#6F5643]  text-[#6F5643] focus:border-[#CC6B49] focus:ring focus:ring-[#CC6B49] focus:ring-opacity-50 transition-all outline-none placeholder-[#6F5643] placeholder-opacity-50"
               />
             </div>
           ))}
           <button
             type="submit"
-            className="w-full mt-6 bg-gradient-to-r from-[#6F5643] to-[#CC6B49] text-[#ECE6C2] py-3 px-6 rounded-lg hover:from-[#7F6653] hover:to-[#DC7B59] transition-all duration-200 font-semibold"
+            className="w-full bg-[#73BDA8] text-[#1E1B1B] py-3 px-5 rounded-[30px] hover:from-[#7F6653] hover:to-[#DC7B59] transition-all duration-200 font-semibold"
           >
             We're Ready!
           </button>
