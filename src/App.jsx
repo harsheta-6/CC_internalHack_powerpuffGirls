@@ -6,8 +6,9 @@ function App() {
   return (
     <div className="bg-[#1E1B1B] min-h-screen w-screen text-[#ECE6C2] flex flex-col items-center justify-center">
       <h1 className="text-[110px] mb-5 font-bold tracking-[0.06em]" style={{fontFamily: 'Chonburi'}}>campus code</h1>
-
-      
+      <img
+      src="./assests/Ellipse-1.png" 
+      />  
 
       <div className="flex gap-15 mb-20 text-[30px] font-semibold tracking-[0.07em]" style={{fontFamily:'CENTAUR'}}>
         <Link to="/2player" className="bg-[#73BDA8] px-15 py-7 rounded-[40px]">
