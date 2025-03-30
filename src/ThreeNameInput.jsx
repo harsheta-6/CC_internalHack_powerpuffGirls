@@ -29,13 +29,13 @@ function ThreeNameInput() {
         </h2>
 
         <img src={Mess} 
-        className="absolute inset-0 "/>
+        className="absolute inset-0"/>
 
-        <form onSubmit={handleSubmit} className="space-y-6" style={{fontFamily:'CENTAUR'}}>
+        <form onSubmit={handleSubmit} className="space-y-6 " style={{fontFamily:'CENTAUR'}}>
           {players.map((player, index) => (
-            <div key={index} className="flex items-center space-x-6 tracking-[0.07em] text-[20px]">
+            <div key={index} className=" flex items-center space-x-6 tracking-[0.3em] text-[20px]">
               <div
-                className="w-4 h-4 rounded-full flex-shrink-0"
+                className="w-10 h-10 rounded-full flex-shrink-0"
                 style={{ backgroundColor: player.color }}
               />
               <input
@@ -48,13 +48,13 @@ function ThreeNameInput() {
                 }}
                 placeholder={`Player ${index + 1}`}
                 required
-                className="w-full px-30 py-2 rounded-[40px] border-2 border-[#CC6B4A]  focus:border-blue-500 focus:ring focus:ring-blue-200 transition-all outline-none"
+                className="w-full px-30 py-2 rounded-[40px] border-2 border-[#CC6B4A]  focus:border-[#ECE6C2] focus:ring focus:ring-[#ECE6C2] placeholder-[#ECE6C2] placeholder-opacity-20 transition-all outline-none"
               />
             </div>
           ))}
           <button
             type="submit"
-            className="w-full mt-6 bg-[#CC6B4A] tracking-[0.06em] text-white py-3 px-6 rounded-[40px] hover:from-blue-600 hover:to-purple-700 transition-all duration-200 font-semibold"
+            className="w-full mt-6 bg-[#CC6B4A] tracking-[0.3em] text-[#1E1B1B] py-3 px-6 rounded-[40px] transition-all duration-200 font-semibold"
           >
             We're Ready!
           </button>

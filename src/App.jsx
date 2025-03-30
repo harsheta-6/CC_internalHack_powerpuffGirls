@@ -28,7 +28,7 @@ function App() {
       className="absolute right-140 top-67"/>
 
       <div
-        className="flex gap-15 mb-20 text-[30px] font-semibold tracking-[0.07em]"
+        className="flex gap-15 z-1000 mb-20 text-[30px] font-semibold tracking-[0.07em]"
         style={{ fontFamily: "CENTAUR" }}
       >
         <Link to="/2player" className="bg-[#73BDA8] px-15 py-7 rounded-[40px]">
