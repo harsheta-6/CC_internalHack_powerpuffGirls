@@ -20,8 +20,8 @@ function FourNameInput() {
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-purple-50 to-blue-50">
-      <div className="bg-white p-8 rounded-xl shadow-lg max-w-md w-full">
+    <div className="flex items-center justify-center min-h-screen bg-[#1E1B1B]">
+      <div>
         <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
           Player Setup
         </h2>

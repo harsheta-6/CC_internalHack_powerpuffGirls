@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import Quiz from "./components/mainPrompt";
+import Mess from "./assets/Vector-3.png"
+
+
 
 function ThreeNameInput() {
   const [isGameStarted, setIsGameStarted] = useState(false);
@@ -19,14 +22,18 @@ function ThreeNameInput() {
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-purple-50 to-blue-50">
-      <div className="bg-white p-8 rounded-xl shadow-lg max-w-md w-full">
-        <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
+    <div className=" flex items-center justify-center min-h-screen bg-[#1E1B1B]">
+      <div>
+        <h2 className="text-[80px] font-medium text-center absolute inset-x-0 top-20 h-20 text-[#CC6B4A]" style={{fontFamily:'Adamina-Regular'}}>
           Player Setup
         </h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
+
+        <img src={Mess} 
+        className="absolute inset-0 "/>
+
+        <form onSubmit={handleSubmit} className="space-y-6">
           {players.map((player, index) => (
-            <div key={index} className="flex items-center space-x-3">
+            <div key={index} className="flex items-center space-x-6 space-y-7 tracking-[0.07em] text-[20px]">
               <div
                 className="w-4 h-4 rounded-full flex-shrink-0"
                 style={{ backgroundColor: player.color }}
