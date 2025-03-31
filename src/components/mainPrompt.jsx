@@ -77,7 +77,7 @@ function Quiz({ players }) {
         <div className="bg-[#1E1B1B] p-8 rounded-[50px] max-w-md w-full">
           <button
             onClick={handleEnd}
-            className="w-full flex items-center justify-center gap-2 bg-black text-white py-3 px-6 rounded-[40px] hover:bg-white transition-colors"
+            className="absolute left-175 flex items-center text-[22px] justify-center gap-2 bg-white opacity-30 text-black py-4 tracking-[0.07em] px-7 rounded-[40px] hover:bg-white transition-colors" style={{fontFamily:'Adamina-Regular'}}
           >
             Build a New Story
           </button>
@@ -87,7 +87,7 @@ function Quiz({ players }) {
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-[#1E1B1B]">
+    <div className="flex items-center text-[22px] justify-center min-h-screen bg-[#1E1B1B]" style={{fontFamily:'CENTAUR'}}>
       <div      >
         <div className="mb-6">
           <div className="flex justify-between items-center mb-4">
@@ -106,7 +106,7 @@ function Quiz({ players }) {
               placeholder="What will you do?"
               value={selectedOption}
               onChange={handleCustomInput}
-              className="w-full py-4 px-15 rounded-[40px] border-2 outline-none transition-all duration-200"style={{
+              className="w-full py-4 px-30 rounded-[40px] border-2 outline-none transition-all duration-200"style={{
                 color: currentPlayer.color}}
 
             />
@@ -129,27 +129,13 @@ function Quiz({ players }) {
         <div className="mt-6 flex gap-2 justify-center">
           {players.map((player, index) => (
             <div key={index} className="flex items-center gap-1">
-              <div
-                className="w-3 h-3 rounded-full"
-                style={{ backgroundColor: player.color }}
-              ></div>
-              <span
-                className="text-xs"
-                style={{
-                  color:
-                    index === currentPlayerIndex ? player.color : "#6b7280",
-                  fontWeight: index === currentPlayerIndex ? "600" : "400",
-                }}
-              >
-                {player.name}
-              </span>
             </div>
           ))}
         </div>
 
         <button
           onClick={handleEndStory}
-          className="absolute bottom-4 right-4 text-sm px-4 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors text-gray-700"
+          className="absolute bottom-7 right-10 text-sm px-4 py-2 rounded-[40px] bg-white bg-opacity-30 hover:bg-gray-200 transition-colors text-gray-700"
         >
           Exit
         </button>

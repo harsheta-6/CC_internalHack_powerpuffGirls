@@ -8,9 +8,9 @@ import Star from "./assets/Vector.png"
 
 function App() {
   return (
-    <div className="bg-[#1E1B1B] min-h-screen w-screen text-[#ECE6C2] flex flex-col items-center justify-center">
+    <div className="bg-[#1E1B1B] min-h-screen w-screen text-[#ECE6C2] flex flex-col items-center justify-center relative px-4 sm:px-8">
       <h1
-        className="text-[105px] mb-5 font-bold tracking-[0.06em]"
+        className="text-5xl sm:text-7xl md:text-[105px] mb-5 font-bold tracking-[0.06em]"
         style={{ fontFamily: "Chonburi" }}
       >
         campus c - de

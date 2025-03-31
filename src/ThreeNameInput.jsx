@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import Quiz from "./components/mainPrompt";
 import Mess from "./assets/Vector-3.png"
 import Footer from "./footer"
+import burstWhite from "./assets/Burst-pucker-3.png"
+import burstBlue from "./assets/Burst-pucker-4.png"
+import burstYellow from "./assets/Burst-pucker-5.png"
 
 
 function ThreeNameInput() {
@@ -22,7 +25,7 @@ function ThreeNameInput() {
   }
 
   return (
-    <div className=" flex items-center justify-center min-h-screen bg-[#1E1B1B]">
+    <div className=" flex items-center text-[#ECE6C2] justify-center min-h-screen bg-[#1E1B1B]">
       <div>
         <h2 className="text-[80px] font-medium text-center absolute inset-x-0 top-20 h-20 text-[#CC6B4A]" style={{fontFamily:'Adamina-Regular'}}>
           Player Setup
@@ -31,11 +34,23 @@ function ThreeNameInput() {
         <img src={Mess} 
         className="absolute inset-0"/>
 
-        <form onSubmit={handleSubmit} className="space-y-6 " style={{fontFamily:'CENTAUR'}}>
+        <img src={burstWhite} 
+        className="absolute top-67 left-132 w-20"/>
+
+        <img src={burstBlue} 
+        className="absolute top-88 left-132 w-20"/>
+
+        <img src={burstYellow} 
+        className="absolute top-108 left-132 w-20"/>
+        
+
+        
+
+        <form onSubmit={handleSubmit} className="absolute top-70 left-140 space-y-8" style={{fontFamily:'CENTAUR'}}>
           {players.map((player, index) => (
-            <div key={index} className=" flex items-center space-x-6 tracking-[0.3em] text-[20px]">
+            <div key={index} className=" flex items-center space-x-11 tracking-[0.3em] text-[20px]">
               <div
-                className="w-10 h-10 rounded-full flex-shrink-0"
+                className="w-4 h-4 rounded-full flex-shrink-0"
                 style={{ backgroundColor: player.color }}
               />
               <input
@@ -48,13 +63,13 @@ function ThreeNameInput() {
                 }}
                 placeholder={`Player ${index + 1}`}
                 required
-                className="w-full px-30 py-2 rounded-[40px] border-2 border-[#CC6B4A]  focus:border-[#ECE6C2] focus:ring focus:ring-[#ECE6C2] placeholder-[#ECE6C2] placeholder-opacity-20 transition-all outline-none"
+                className="w-full px-30 py-2 rounded-[40px] border-2 focus:border-[#ECE6C2] focus:ring focus:ring-[#ECE6C2] focus:ring-opacity-50 transition-all outline-none tracking-[0.3em] placeholder-opacity-20" style={{ borderColor: player.color, placeholder: player.color }}
               />
             </div>
           ))}
           <button
             type="submit"
-            className="w-full mt-6 bg-[#CC6B4A] tracking-[0.3em] text-[#1E1B1B] py-3 px-6 rounded-[40px] transition-all duration-200 font-semibold"
+            className=" absolute left-30 mt-6 bg-[#CC6B4A] tracking-[0.3em] text-[#1E1B1B] py-3 px-20 rounded-[40px] transition-all duration-200 font-semibold"
           >
             We're Ready!
           </button>
