@@ -203,34 +203,31 @@ function Quiz({ players }) {
 
   return (
     <div
-      className="flex items-center text-[22px] justify-center min-h-screen bg-[#1E1B1B]"
+      className=" flex items-center text-[22px] justify-center min-h-screen bg-[#1E1B1B]"
       style={{ fontFamily: "CENTAUR" }}>
       <div className="max-w-2xl w-full">
         <div className="mb-6">
-          <div className="flex justify-between items-center mb-4">
+          <div className="z-1000 flex justify-between items-center mb-4">
             {currentTurnPlayer && (
               <p className="text-white">Current player: {currentTurnPlayer}</p>
             )}
           </div>
         </div>
 
-        <img src={Messy}
-        className="absolute inset-0 opacity-20"/>
-
-        <div className=" rounded-[20px] mb-6">
+        <div className=" z-1000 rounded-[20px] mb-6">
           <h2 className="w-full text-lg font-thin mb-6 text-white whitespace-pre-line">
             {generatedStory}
           </h2>
         </div>
 
-        <div className="space-y-3">
+        <div className=" z-1000 space-y-3">
           <div className="mt-3">
             <input
               type="text"
               placeholder="What will you do?"
               value={selectedOption}
               onChange={handleCustomInput}
-              className="w-full py-3 px-6 rounded-[40px] border-2 outline-none transition-all duration-200"
+              className=" z-1000 w-full py-3 px-6 rounded-[40px] border-2 outline-none transition-all duration-200"
               style={{
                 color: currentPlayer.color,
                 backgroundColor: "",
@@ -243,7 +240,7 @@ function Quiz({ players }) {
         <button
           onClick={handleNext}
           disabled={!selectedOption}
-          className="w-full mt-6 py-3 px-6 rounded-[40px] transition-colors"
+          className="z-1000 w-full mt-6 py-3 px-6 rounded-[40px] transition-colors"
           style={{
             backgroundColor: selectedOption ? currentPlayer.color : "#6F5643",
             color: selectedOption ? "white" : "rgba(255,255,255,0.5)",
@@ -253,7 +250,7 @@ function Quiz({ players }) {
           Continue Story
         </button>
 
-        <div className="mt-6 flex gap-2 justify-center">
+        <div className="z-1000 mt-6 flex gap-2 justify-center">
           {players.map((player, index) => (
             <div key={index} className="flex items-center gap-1">
               <div
