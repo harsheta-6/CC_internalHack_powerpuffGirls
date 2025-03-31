@@ -34,7 +34,6 @@ function Quiz({ players }) {
           const data = await response.json();
           console.log("Players added:", data);
 
-          // After adding players, generate the initial story
           await generateInitialStory();
         } catch (error) {
           console.error("Error initializing game:", error);
@@ -180,11 +179,13 @@ function Quiz({ players }) {
         <div className="bg-[#1E1B1B] p-8 rounded-[50px] max-w-md w-full">
           <button
             onClick={handleEnd}
-            className="absolute left-175 flex items-center text-[22px] justify-center gap-2 bg-white opacity-30 text-black py-4 tracking-[0.07em] px-7 rounded-[40px] hover:bg-white transition-colors"
-            style={{ fontFamily: "Adamina-Regular" }}
-          >
+            className="z-1000 absolute left-175 flex items-center text-[22px] justify-center gap-2 bg-white opacity-30 text-black py-4 tracking-[0.07em] px-7 rounded-[40px] hover:bg-white transition-colors"
+            style={{ fontFamily: "Adamina-Regular" }}>
             Build a New Story
           </button>
+          <img src={Messy}
+        className="absolute inset-0 opacity-20"/>
+
         </div>
       </div>
     );
@@ -194,7 +195,7 @@ function Quiz({ players }) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-[#1E1B1B]">
         <div>
-          <p className="text-white" style={{ fontFamily: "Adamina-Regular" }}>Generating story...</p>
+          <p className="text-white text-[25px]" style={{ fontFamily: "Adamina-Regular" }}>Generating story...</p>
         </div>
       </div>
     );
@@ -203,9 +204,8 @@ function Quiz({ players }) {
   return (
     <div
       className="flex items-center text-[22px] justify-center min-h-screen bg-[#1E1B1B]"
-      style={{ fontFamily: "CENTAUR" }}
-    >
-      <div className="max-w-md w-full">
+      style={{ fontFamily: "CENTAUR" }}>
+      <div className="max-w-2xl w-full">
         <div className="mb-6">
           <div className="flex justify-between items-center mb-4">
             {currentTurnPlayer && (
@@ -214,6 +214,9 @@ function Quiz({ players }) {
           </div>
         </div>
 
+        <img src={Messy}
+        className="absolute inset-0 opacity-20"/>
+
         <div className=" rounded-[20px] mb-6">
           <h2 className="w-full text-lg font-thin mb-6 text-white whitespace-pre-line">
             {generatedStory}
@@ -221,7 +224,7 @@ function Quiz({ players }) {
         </div>
 
         <div className="space-y-3">
-          <div className="mt-4">
+          <div className="mt-3">
             <input
               type="text"
               placeholder="What will you do?"
@@ -264,8 +267,7 @@ function Quiz({ players }) {
 
         <button
           onClick={handleEndStory}
-          className="absolute bottom-7 right-10 text-sm px-4 py-2 rounded-[40px] bg-white bg-opacity-30 hover:bg-gray-200 transition-colors text-white"
-        >
+          className="fixed bottom-7 right-10 text-sm px-4 py-2 rounded-[40px] bg-white bg-opacity-30 hover:opacity-30 transition-colors text-black">
           End Story
         </button>
       </div>

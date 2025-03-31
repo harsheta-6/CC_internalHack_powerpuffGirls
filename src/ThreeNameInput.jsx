@@ -63,13 +63,13 @@ function ThreeNameInput() {
                 }}
                 placeholder={`Player ${index + 1}`}
                 required
-                className="w-full px-30 py-2 rounded-[40px] border-2 focus:border-[#ECE6C2] focus:ring focus:ring-[#ECE6C2] focus:ring-opacity-50 transition-all outline-none tracking-[0.3em] placeholder-opacity-20" style={{ borderColor: player.color, placeholder: player.color }}
+                className="w-full px-40 py-2 rounded-[40px] border-2 focus:border-[#ECE6C2] focus:ring focus:ring-[#ECE6C2] focus:ring-opacity-50 transition-all outline-none tracking-[0.3em] placeholder-opacity-20" style={{ borderColor: player.color, placeholder: player.color }}
               />
             </div>
           ))}
           <button
             type="submit"
-            className=" absolute left-30 mt-6 bg-[#CC6B4A] tracking-[0.3em] text-[#1E1B1B] py-3 px-20 rounded-[40px] transition-all duration-200 font-semibold"
+            className=" absolute left-30 mt-6 bg-[#CC6B4A] tracking-[0.3em] text-[#1E1B1B] py-3 px-20 rounded-[40px] transition-all duration-200 font-semibold text-[22px]"
           >
             We're Ready!
           </button>
